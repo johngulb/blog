@@ -51,12 +51,12 @@
 			},
 			lat: {
 				type: 'string',
-				source: 'meta',
+				source: 'html',
 				meta: 'lat'
 			},
 			lng: {
 				type: 'string',
-				source: 'meta',
+				source: 'html',
 				meta: 'lng'
 			}
 		},
