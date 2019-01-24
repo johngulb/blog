@@ -38,6 +38,12 @@
 	margin-bottom: 1.0em;
 }
 
+.wp-block-gutenberg-examples-example-06-mapped .map-image {
+	margin-bottom: 3.0em;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+
 .wp-block-gutenberg-examples-example-06-mapped ul {
 	padding-left: 2.5em !important; /* Needs fix in Gutenberg. */
 }
