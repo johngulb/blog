@@ -9,4 +9,4 @@ Specifiy a location, and add a description. The published result includes a goog
 
 ## Run via docker
 
-docker-compose up -d
+`docker-compose up -d`
