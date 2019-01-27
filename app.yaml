@@ -1,0 +1,29 @@
+runtime: php72
+
+runtime_config:
+  document_root: app
+
+service: blog-server
+
+entrypoint: serve gae-app.php
+
+handlers:
+- url: /(.*\.(htm|html|css|js))
+  static_files: \1
+  upload: .*\.(htm|html|css|js)$
+
+- url: /wp-content/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))
+  static_files: wp-content/\1
+  upload: wp-content/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+
+- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))
+  static_files: \1
+  upload: .*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+
+- url: /wp-includes/images/media/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))
+  static_files: wp-includes/images/media/\1
+  upload: wp-includes/images/media/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+
+env_variables:
+  # Put production environment variables here.
+  DB_HOST: :/cloudsql/john-works:us-central1:john-works-db

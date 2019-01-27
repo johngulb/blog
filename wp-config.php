@@ -1,35 +1,59 @@
 <?php
 /**
- * The base configuration for WordPress
+ * The base configurations of the WordPress.
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * This file has the following configurations: MySQL settings, Table Prefix,
+ * Secret Keys, WordPress Language, and ABSPATH. You can find more information
+ * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
+ * wp-config.php} Codex page. You can get the MySQL settings from your web host.
  *
- * This file contains the following configurations:
- *
- * * MySQL settings
- * * Secret keys
- * * Database table prefix
- * * ABSPATH
- *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
  *
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+// Use environment variables, found in .env
+require_once(__DIR__ . '/vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
 
-/** MySQL database username */
-define('DB_USER', 'wordpress');
+// $onGae is true on production.
+if (isset($_SERVER['GAE_ENV'])) {
+    $onGae = true;
+} else {
+    $onGae = false;
+}
 
-/** MySQL database password */
-define('DB_PASSWORD', 'wordpress');
+// Cache settings
+// Disable cache for now, as this does not work on App Engine for PHP 7.2
+define('WP_CACHE', false);
 
-/** MySQL hostname */
-define('DB_HOST', 'db:3306');
+// Disable pseudo cron behavior
+define('DISABLE_WP_CRON', true);
+
+// Determine HTTP or HTTPS, then set WP_SITEURL and WP_HOME
+if ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+    || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) {
+    $protocol_to_use = 'https://';
+} else {
+    $protocol_to_use = 'http://';
+}
+if (isset($_SERVER['HTTP_HOST'])) {
+    define('HTTP_HOST', $_SERVER['HTTP_HOST']);
+} else {
+    define('HTTP_HOST', 'localhost');
+}
+define('WP_SITEURL', $protocol_to_use . HTTP_HOST);
+define('WP_HOME', $protocol_to_use . HTTP_HOST);
+
+/** The name of the local database for WordPress */
+define('DB_NAME', getenv('DB_NAME'));
+/** Local environment MySQL login info */
+define('DB_HOST', getenv('DB_HOST'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PASSWORD', getenv('DB_PASSWORD'));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
