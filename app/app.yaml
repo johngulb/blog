@@ -1,8 +1,5 @@
 runtime: php72
 
-runtime_config:
-  document_root: app
-
 service: blog-server
 
 entrypoint: serve gae-app.php
