@@ -36,7 +36,7 @@
 	blocks.registerBlockType( 'gutenberg-examples/example-06-mapped', {
 		title: i18n.__( 'Map', 'gutenberg-examples' ),
 		description: 	i18n.__('Specify a city, address or place, and a map will be included'),
-		icon: 'location',
+		icon: 'location-alt',
 		category: 'widgets',
 		attributes: {
 			location: {
