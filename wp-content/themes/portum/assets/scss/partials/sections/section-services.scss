@@ -1,0 +1,26 @@
+/* ----------------------------------- #02 - SERVICES section --------------------------------*/
+
+.ewf-slider {
+	.services-item {
+		margin: 30px auto;
+	}
+}
+
+.services-item {
+	padding: 25px;
+	position: relative;
+	list-style: none;
+	margin-bottom: 20px;
+
+	div[class*="ewf-like-"] {
+		color: $text-color;
+	}
+
+	p {
+		color: lighten($text-color, 40);
+		font-size: 0.875em;
+		line-height: 1.5em;
+	}
+}
+
+/* ----------------------------------- #02 - SERVICES section - END -----------------------------*/

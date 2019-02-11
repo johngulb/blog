@@ -1,0 +1,44 @@
+.epsilon-dashboard-tab {
+  padding: 20px 0;
+  display: none;
+  position: relative;
+  &.active {
+    display: block;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .col {
+      flex: 1;
+	  min-width: 30%;
+    }
+  }
+
+  .standout {
+    border: 1px dashed #555;
+    background: #fff;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+#epsilon-getting-started {
+
+	.col {
+		text-align: center;
+		padding: 30px 15px;
+		background-color: #fafafa;
+		border: 1px solid #dddddd;
+		min-width: auto;
+		margin-left: 6px;
+		margin-right: 6px;
+
+		&:first-child { margin-left: 0px; }
+		&:last-child { margin-right: 0px; }
+	}
+
+}

@@ -1,0 +1,42 @@
+{
+  "name": "epsilon-dashboard",
+  "title": "Epsilon Dashboard",
+  "author": "Macho Themes",
+  "version": "1.0.0",
+  "main": "gruntfile.js",
+  "license": "GPL v3",
+  "repository": "https://github.com/MachoThemes/epsilon-theme-dashboard",
+  "homepage": "https://machothemes.com/",
+  "devDependencies": {
+    "@types/jquery": "^3.3.22",
+    "@types/jqueryui": "^1.12.6",
+    "@types/vue": "^2.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.1.6",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "dev": "npm run development --scripts-prepend-node-path",
+    "development": "cross-env NODE_ENV=development webpack --hide-modules --mode=development",
+    "watch": "webpack --hide-modules --mode=development --watch --progress --hide-modules",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production webpack --hide-modules --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  }
+}

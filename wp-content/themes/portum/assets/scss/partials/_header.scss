@@ -1,0 +1,111 @@
+/* ==========================================================================
+    =Header
+    ========================================================================= */
+
+#header {
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, .07);
+	position: relative;
+	z-index: 50;
+	background-color: $header_background;
+	line-height: 60px;
+	
+	&.sticky--top-bar {
+		top: 40px;
+	}
+	&.header--over-content {
+		position: absolute;
+		width: 100%;
+		top: 0;
+	}
+	&.header--no-shadow {
+		box-shadow: none;
+	}
+}
+
+.header--over-content + section > .section-video {
+	margin-top: -90px;
+}
+
+body.admin-bar #header.header--over-content {
+	top: 32px;
+}
+
+body.ctdw-bar-visible #header.header--over-content {
+	top: 40px;
+}
+
+/* ==========================================================================
+    =Logo
+    ========================================================================= */
+
+/**
+	 * 1. displaying the <a> inline-block makes it depends on the size of it's children
+	 *    we add max-width:100% to tell it not that it shouldn't extend beyond the size of it's
+	 *    parent if it's child is very large eg a 1000x1000 logo img
+	 */
+#logo {
+	float:left;
+}
+
+#logo a {
+	display: inline-block;
+	max-width: 100%;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1;
+	/* 1 */
+}
+
+#logo img {
+	transition: width 0.3s;
+	max-width: initial !important;
+}
+
+/* ==========================================================================
+    =Sticky Header
+    ========================================================================= */
+
+@media (min-width: 1025px) {
+	/**
+	   * 1. The z-index has to be 1020 so it is bigger than the back to top buttons z-index that is 1010
+	   */
+	#header.stuck {
+		position: fixed;
+		z-index: 1020;
+		/* 1 */
+		top: 0;
+		width: 100%;
+		// padding: 10px 0 0 0;
+		margin: 0 auto;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		transition: all 0.3s;
+		#logo img {
+			max-width: 80%;
+		}
+
+		#custom-search-button {
+			top: 23px;
+		}
+	}
+	body.ctdw-bar-visible #header.stuck {
+		top: 40px;
+	}
+	body.admin-bar #header.stuck {
+		top: 32px;
+	}
+}
+
+/* ==========================================================================
+    =Sticky header logo 
+    ========================================================================= */
+img.custom-logo--sticky {
+	display: none;
+
+	#header.stuck & {
+		display: inline;
+	}
+}
+
+#header.stuck.header--has-sticky-logo .custom-logo {
+	display: none;
+}

@@ -1,0 +1,91 @@
+/* ----------------------------------- #08 - PRICING section --------------------------------*/
+
+.ewf-pricing__featured {
+	background-color: $accent-1-color;
+	color: #fff;
+	padding: 8px;
+	border-bottom: 2px solid transparent;
+	position: absolute;
+	top: 0;
+	width: calc(100% - 16px);
+}
+
+.ewf-pricing__item-container {
+	padding: 3em 0;
+	position: relative;
+	transition: all 100ms ease-in-out;
+
+	.ewf-pricing__content,
+	.ewf-pricing__plan,
+	.ewf-pricing__details,
+	.ewf-pricing__button-wrapper {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.ewf-pricing__plan {
+		border-top: 1px dashed #e6e6e6;
+		border-bottom: 1px dashed #e6e6e6;
+		margin-bottom: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		.ewf-like-h4 {
+			color: $headings-color;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		span {
+			color: #b3b3b3;
+			font-size: 14px;
+		}
+	}
+
+	.ewf-pricing__content {
+
+		.ewf-like-h4 {
+			color: $headings-color;
+			font-size: 24px;
+			font-weight: 500;
+		}
+
+		p {
+			color: $text-color;
+			font-size: 0.875em;
+			line-height: 1.5em;
+		}
+	}
+
+	.ewf-pricing__details {
+		padding: 10px 0;
+	}
+
+	ul {
+		padding: 30px;
+		list-style: none;
+		li {
+			color: lighten($text-color, 20);
+
+			&.yes {
+				&:before {
+					content: '✓';
+					color: $accent-1-color;
+					margin-right: 10px;
+				}
+			}
+
+			&.no {
+				&:before {
+					content: 'x';
+					color: darken($text-color, 20);
+					margin-right: 10px;
+				}
+			}
+		}
+
+	}
+
+}
+
+/* ----------------------------------- #08 - PRICING section - END ---------------------------*/

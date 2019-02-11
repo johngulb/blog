@@ -1,0 +1,58 @@
+/* ----------------------------------- #07 - TEAM section --------------------------------*/
+
+.ewf-section__team {
+
+	width: 100%;
+
+	.ewf-team__container {}
+
+	.ewf-team__title {
+		padding-top: 20px;
+	}
+
+	.ewf-team__content {
+		font-size: 14px;
+		line-height: 1.8;
+
+		p {
+			margin: 0 0 0.5em 0;
+			font-size: 0.875em;
+		}
+	}
+
+	.ewf-team__thumbnail {
+		img {
+			width: 100%;
+		}
+	}
+	div[class*="ewf-like-"] {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.ewf-team__social_links {
+		list-style: none;
+		margin-top: 10px;
+
+		li {
+			display: inline-block;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 12px;
+				padding: 2px 6px;
+
+				&:hover {
+					background-color: #333;
+					color: #FFF;
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------- #07 - TEAM section - END -------------------------*/

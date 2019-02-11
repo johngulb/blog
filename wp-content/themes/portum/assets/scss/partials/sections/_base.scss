@@ -1,0 +1,103 @@
+/* ----------------------- SECTIONS ------------------------ */
+
+/* =Section
+   ========================================================================== */
+
+.ewf-section {
+	position: relative;
+	padding: $spacing-section-medium 0;
+	margin-bottom: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.ewf-section--spacing-small {
+	padding: $spacing-section-small 0;
+}
+
+.ewf-section--spacing-medium {
+	padding: $spacing-section-medium 0;
+}
+
+.ewf-section--spacing-large {
+	padding: $spacing-section-large 0;
+}
+
+.ewf-section--parallax {
+	background-attachment: fixed;
+}
+
+.ewf-section__overlay-color {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.ewf-section__content {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+}
+
+.ewf-text-align--left {
+	text-align: left;
+}
+
+.ewf-text-align--center {
+	text-align: center;
+}
+
+.ewf-text-align--right {
+	text-align: right;
+}
+
+.ewf-text-transform--uppercase {
+	text-transform: uppercase;
+}
+
+.ewf-content__wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+
+	.ewf-valign--top,
+	.ewf-valign--top .ewf-section__content > div > .row {
+		align-items: flex-start;
+	}
+
+	.ewf-valign--middle,
+	.ewf-valign--middle .ewf-section__content > div > .row {
+		align-items: center;
+	}
+
+	.ewf-valign--bottom,
+	.ewf-valign--bottom .ewf-section__content > div > .row {
+		align-items: flex-end;
+	}
+
+	.ewf-text-align--left,
+	.ewf-text-align--left .ewf-section__content .row,
+	.ewf-text-align--left .ewf-section__content .ewf-content__wrap {
+		justify-content: flex-start;
+	}
+
+	.ewf-text-align--center,
+	.ewf-text-align--center .ewf-section__content .row,
+	.ewf-text-align--center .ewf-section__content .ewf-content__wrap {
+		justify-content: center;
+	}
+
+	.ewf-text-align--right,
+	.ewf-text-align--right .ewf-section__content .row,
+	.ewf-text-align--right .ewf-section__content .ewf-content__wrap {
+		justify-content: flex-end;
+	}
+}
+
+/* ----------------------- SECTIONS ----- end ------------------------ */

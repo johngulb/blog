@@ -1,0 +1,254 @@
+.customize-control-epsilon-repeater {
+	position: relative;
+
+	> label .customize-control-title {
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+
+	.repeater-fields {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.epsilon-sort-rows {
+		float: right;
+	}
+
+	.repeater-row {
+		margin-bottom: 6px;
+		margin-top: 6px;
+		position: relative;
+		box-shadow: none;
+		background: $repeater_row_background;
+		transition: margin-top .15s, margin-bottom .15s;
+		border-top: 1px solid $repeater_row_separator_color;
+
+		&:first-child {
+			margin-top: 0;
+		}
+		&.minimized {
+			margin-bottom: 0;
+			margin-top: 0;
+			.repeater-row-header {
+				&:hover {
+					color: $repeater_row_text_hover_color;
+					background: $repeater_row_background_hover;
+				}
+			}
+			.repeater-row-content {
+				display: none;
+			}
+		}
+		> label {
+			padding: 0;
+			margin-bottom: 12px;
+		}
+		.repeater-field {
+
+			&.repeater-field- {
+				display: none;
+			}
+			&.repeater-field-radio-image {
+				input {
+					img {
+						border: 1px solid transparent;
+					}
+					display: none;
+					&:checked {
+						+ label {
+							img {
+								-webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .25);
+								box-shadow: 0 0 5px 2px rgba(0, 0, 0, .25);
+								border: 1px solid #3498db;
+							}
+						}
+					}
+				}
+			}
+			&.repeater-field-epsilon-button-group label {
+				margin: 0;
+			}
+			&:last-child {
+				border-bottom: none;
+			}
+
+		}
+	}
+	.repeater-row-header {
+		position: relative;
+		padding: 14px 0 14px 12px;
+		color: #191e23;
+		height: 20px;
+		font-weight: 600;
+		transition: .20s all ease-in-out;
+		cursor: pointer;
+		&:before {
+			content: "\f545";
+			font-family: "Dashicons";
+			display: inline-block;
+			position: absolute;
+			left: -15px;
+			top: 16px;
+			font-size: 15px;
+			-webkit-transition: all .2s;
+			transition: all .2s;
+		}
+		.repeater-minimize,
+		.repeater-row-remove {
+			vertical-align: middle;
+			float: right;
+			color: #191e23;
+			width: 18px;
+			height: 18px;
+			line-height: 18px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: color .15s;
+	 		margin-top: -14px;
+			padding: 15px 6px;
+
+
+			&:hover {
+				color: $repeater_row_text_hover_color;
+			}
+		}
+		.repeater-row-remove {
+			border-right: 1px solid $repeater_row_separator_color;
+		}
+
+		&:hover {
+			&:before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	.repeater-row-content {
+		border-top: 1px solid $repeater_row_separator_color;
+		padding: 0 10px 10px 10px;
+	}
+	.repeater-field {
+		margin: 0;
+		width: 100%;
+		clear: both;
+		padding: 18px 0 6px 0;
+		.customize-control-title {
+			line-height: initial;
+			display: inline-block;
+		}
+		.customize-control-description {
+			line-height: initial;
+		}
+		&.repeater-field-hidden {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+	}
+	.repeater-field-select select {
+		margin-left: 0;
+	}
+	.repeater-field-checkbox {
+		label {
+			line-height: 28px;
+		}
+		input {
+			line-height: 28px;
+			margin-right: 5px;
+		}
+	}
+	.repeater-row-footer {
+		display: none;
+	}
+	.repeater-row-label {
+		display: block;
+		width: calc(100% - 100px);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-weight: 600;
+		line-height: 20px;
+		height: 20px;
+		float: left;
+	}
+	.repeater-row-remove {
+		color: #a00;
+		&:hover {
+			color: #f00;
+		}
+	}
+	.repeater-minimize {
+		line-height: 36px;
+	}
+	.remove-button,
+	.upload-button {
+		width: 48%;
+	}
+
+	.epsilon-repeater-is-sorting {
+		.repeater-row {
+			.repeater-row-header {
+				padding-left: 40px;
+				transition: all .2s;
+				cursor: grab;
+				&:before {
+					left: 10px;
+					transition: all .2s;
+				}
+			}
+
+			&.ui-sortable-helper .repeater-row-header {
+				cursor: grabbing;
+			}
+		}
+	}
+}
+
+.repeater-field.repeater-field-textarea {
+	textarea {
+		display: block;
+		width: 100%;
+		resize: vertical;
+	}
+}
+
+.limit {
+	padding: 3px;
+	border-radius: 3px;
+	&.highlight {
+		background: #d32f2f;
+		color: #fff;
+	}
+}
+
+.button-holder {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.repeater-field-url input,
+.repeater-field-text input {
+}
+
+.repeater-field-epsilon-color-picker {
+	.epsilon-color-picker-title {
+		margin-left: 42px;
+	}
+	.minicolors-input {
+		top: 0;
+		left: 37px;
+		height: 24px;
+		line-height: 24px;
+		border-radius: 4px;
+		display: block;
+	}
+	.minicolors-panel {
+		top: 28px;
+		left: 37px;
+	}
+	.minicolors-swatch {
+		top: 0;
+		left: 0;
+	}
+}
+

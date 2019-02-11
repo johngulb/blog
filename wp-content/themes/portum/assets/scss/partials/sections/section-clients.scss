@@ -1,0 +1,31 @@
+/* =Partner/Client
+   ========================================================================== */
+
+.ewf-partner,
+.ewf-partner-slider {
+	position: relative; /* fix for when client list is a slider and we need to display the quick edit icons */
+
+	img {
+		width: 100%;
+	}
+
+}
+
+/* =Partner/Client List
+	   ========================================================================== */
+.ewf-partners-list {
+	list-style: none;
+
+	li {
+		margin-top: 10px;
+	}
+}
+
+.section-clientlist {
+	.ewf-slider {
+		.ewf-slider__pager .slick-dots li button {
+			background: rgba(0, 0, 0, 0.2);
+			border: 1px solid #ddd;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+/* ----------------------------------- #09 - BLOG section --------------------------------*/
+
+.section-blog {
+	.ewf-btn {
+		margin: 20px auto;
+	}
+}
+
+.ewf-blog {
+	margin: 10px auto;
+	position: relative;
+
+	.ewf-blog__featured-image {
+		img {
+			width: 100%;
+		}
+	}
+
+	.ewf-blog__meta {
+		margin-bottom: 1rem;
+	}
+
+	.ewf-blog__container {
+		padding: 1.5rem;
+
+		.ewf-blog__news-date a,
+		.ewf-blog__news-date,
+		.ewf-blog__author a,
+		.ewf-blog__author,
+		.ewf-blog__comments a,
+		.ewf-blog__comments {
+			color: #a5a5ab;
+			margin-right: 5px;
+			font-size: 15px;
+		}
+
+		div[class*="ewf-like-"],
+		div[class*="ewf-like-"] a {
+			color: #404044;
+		}
+
+		.ewf-blog__content,
+		.ewf-blog__content p{
+			color: #8b8b92;
+			font-size: 15px;
+		}
+
+	}
+}
+
+/* ----------------------------------- #09 - BLOG section - END --------------------------------*/

@@ -1,0 +1,30 @@
+/* ----------------------------------- #05 - TEAM section --------------------------------*/
+.features-item {
+	position: relative;
+	padding: 25px;
+	list-style: none;
+
+	div[class*="ewf-like-"] {
+		color: $text-color;
+	}
+
+	p {
+		color: lighten($text-color, 40);
+		font-size: 0.875em;
+		line-height: 1.5em;
+	}
+
+	&.features-left {
+		text-align: right;
+	}
+}
+
+.features-image {
+	text-align: center;
+
+	img {
+		display: inline-block;
+	}
+}
+
+/* ----------------------------------- #05 - TEAM section - END -------------------------*/

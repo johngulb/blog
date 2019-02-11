@@ -1,0 +1,24 @@
+.section-newsletter {
+
+	form {
+ 	    display: flex;
+	    flex-wrap: nowrap;
+	    align-items: center;
+		justify-content: center;
+
+		input[type=email] {
+			max-width: 300px;
+			width: 100%;
+			margin-right:-60px;
+			border-radius: 35px;
+			padding-left: 15px;
+			border: none;
+		}
+
+		input[type=submit] {
+			min-width: 120px;
+			margin: 0;
+		}
+	}
+
+}
